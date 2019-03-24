@@ -1,0 +1,86 @@
+nav{
+  overflow:hidden;
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  max-height:100px;
+}
+
+
+/* ----------------- Main Nav ---------------- */
+.navdiv1,.navdiv2,.navdiv3{
+  flex: 1;
+  text-align: center;
+}
+
+.navdiv1{
+  text-align: left;
+  background-color: red;
+}
+
+
+.navdiv2{
+  text-align: center;
+  background-color: white;
+  flex:2;
+}
+
+.navdiv3{
+  align-items: flex-end;
+  background-color: red;
+
+}
+
+
+/* ----------------- Auth Nav ---------------- */
+
+.auth-nav{
+  top:0;
+  margin-top:0;
+  padding-top:30px;
+  background-color: rgb(224, 127, 127);
+  border: 5px solid rgb(255, 100, 100);
+}
+
+.auth-nav > .button-row{
+  flex: 1;
+  padding:12px;
+}
+
+/* ----------------- Body ---------------- */
+.body{
+  margin-top: 50px;
+  display: flex;
+  border: 2px solid #AAA;
+  border-radius: 5px;
+  background-color: #CCC;
+  min-height:100px;
+}
+
+.navbody1,.navbody3{
+  flex:1;
+  background-color: red;
+}
+
+.navbody2{
+  flex: 4;
+  background-color: blue;
+}
+
+
+/*  --------------- Login Form ---------------*/
+.login-form{
+  margin-left:30%;
+  width:40%;
+  text-align:center;
+}
+
+.login-form{
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.form-element{
+  margin-bottom: 10px;
+}

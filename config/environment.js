@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'web',
+    modulePrefix: 'csgames2019-psc',
     environment,
     rootURL: '/',
     locationType: 'auto',

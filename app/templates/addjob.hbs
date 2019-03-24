@@ -1,0 +1,27 @@
+<!-- description_en,description_fr,salary,work_universe,required_skills,education -->
+<form class="" {{action "addjob" on="submit"}} method="post">
+  <div class="form-element">
+    Description: {{input type="textarea" cols="80" value=description}}
+  </div>
+  <div class="form-element">
+    Salary: {{input type="number" id="salary" value=salary}}
+  </div>
+  <div class="form-element">
+    Work Universe: {{input type="number" id="work_universe" value=work_universe}}
+  </div>
+  <div class="form-element">
+    Required Skills: {{input type="text" id="required_skills" value=required_skills}}
+  </div>
+  <div class="form-element">
+    Education: {{input type="number" id="education" value=education}}
+  </div>
+  <div class="form-element">
+    <button type="submit" class = "btn btn-primary">Submit Job</button>
+    {{#if errorMessage}}
+      <p>Authentication Failed.</p>
+    {{/if}}
+  </div>
+</form>
+
+
+{{outlet}}

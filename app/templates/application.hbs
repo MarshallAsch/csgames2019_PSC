@@ -1,2 +1,98 @@
+<nav>
+  <div class="container navdiv1">
+    extra-space
+  </div>
+  <div class="container navdiv2">
+    JOB SEARCH BABY
+  </div>
+  <div class="container navdiv3">
+    {{#if session.isAuthenticated}}
+        {{#link-to "home"}}
+          <button
+            {{action "invalidateSession"}}
+            type="button"
+            name="logout-btn"
+            class="btn btn-primary"
+          >
+            Logout
+          </button>
+        {{/link-to}}
+        {{#link-to "editprofile"}}
+            <button
+              type="button"
+              name="edit-profile-btn"
+              class="btn btn-primary"
+            >
+              Edit Profile
+            </button>
+          {{/link-to}}
+    {{else}}
+      {{#link-to "login"}}
+        <button
+          type="button"
+          name="login-btn"
+          class="btn btn-primary"
+        >
+          Login
+        </button>
+      {{/link-to}}
+      {{#link-to "signup"}}
+        <button
+          type="button"
+          name="signup-btn"
+          class="btn btn-primary"
+        >
+          Signup
+        </button>
+      {{/link-to}}
+    {{/if}}
+  </div>
+</nav>
 
-{{outlet}}
+<div class="auth-nav">
+  {{#if session.isAuthenticated}}
+
+    <div class="button-row">
+      {{#link-to "searchjob"}}
+        <button
+          type="button"
+          name="search-job-btn"
+          class="btn btn-danger"
+        >
+          Search Jobs
+        </button>
+      {{/link-to}}
+      {{#link-to "searchcandidate"}}
+        <button
+          type="button"
+          name="viewChallengeButton"
+          class="btn btn-danger"
+        >
+          Search Candidates
+        </button>
+      {{/link-to}}
+      {{#link-to "addjob"}}
+        <button
+          type="button"
+          name="viewChallengeButton"
+          class="btn btn-danger"
+        >
+          Add Job Posting
+        </button>
+      {{/link-to}}
+      {{#link-to "viewjobs"}}
+        <button
+          type="button"
+          name="viewChallengeButton"
+          class="btn btn-danger"
+        >
+          View Job Posting
+        </button>
+      {{/link-to}}
+    </div>
+  {{/if}}
+</div>
+
+<div class="container body">
+  {{outlet}}
+</div>
