@@ -8,7 +8,7 @@ export default Controller.extend({
       console.log(this.getProperties('description','salary','work_universe','required_skills','education'))
       let {description,salary,work_universe,required_skills,education} = this.getProperties('description','salary','work_universe','required_skills','education')
       $.ajax({
-        url: "http://10.202.27.216:8080/api/v1/jobs/",
+        url: "http://localhost:8080/api/v1/jobs/",
         type: "POST",
         contentType:"application/json",
         data: JSON.stringify({
